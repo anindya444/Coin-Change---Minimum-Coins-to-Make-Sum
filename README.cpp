@@ -7,7 +7,8 @@ Given an array of coins[] of size n and a target value sum, where coins[i] repre
 using namespace std;
 
 int minicoinchange(vector<int>&arr,int i, int sum)
-    { if(i == arr.size()-1){
+    { if(sum==0)return 0;
+       if(i == arr.size()-1){
          if(sum % arr[i] == 0)
             return sum / arr[i];
         else
